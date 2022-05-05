@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram clone</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+</head>
+<body>
+    <div class="container">
+
+        <div class="header">
+            <div class="nav">
+                <div class="logo-img">
+                    <img src="/img/logo.png" alt="" class="logo-img" width="103px" height="29px">
+                </div>
+            <div class="search">
+
+                <span class="search-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search " viewBox="0 0 16 16">
+                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                      </svg> &nbsp;<span class="search-text">Search</span>
+                </span>
+                 
+            </div>
+                
+            <div class="nav-items">
+                <div class="items-icon abcs">
+                    <div class="nav-icons  m-50"> 
+                        <svg aria-label="Home"   style="width:20px ; height:24px;" color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24">
+                            <path d="M22 23h-6.001a1 1 0 01-1-1v-5.455a2.997 2.997 0 10-5.993 0V22a1 1 0 01-1 1H2a1 1 0 01-1-1V11.543a1.002 1.002 0 01.31-.724l10-9.543a1.001 1.001 0 011.38 0l10 9.543a1.002 1.002 0 01.31.724V22a1 1 0 01-1 1z"></path></svg>
+                    </div>
+                    <div class="nav-icons"> <svg aria-label="Messenger" style="width:24px ; height:24px;" color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24"><path d="M12.003 2.001a9.705 9.705 0 110 19.4 10.876 10.876 0 01-2.895-.384.798.798 0 00-.533.04l-1.984.876a.801.801 0 01-1.123-.708l-.054-1.78a.806.806 0 00-.27-.569 9.49 9.49 0 01-3.14-7.175 9.65 9.65 0 0110-9.7z" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="1.739"></path>
+                        <path d="M17.79 10.132a.659.659 0 00-.962-.873l-2.556 2.05a.63.63 0 01-.758.002L11.06 9.47a1.576 1.576 0 00-2.277.42l-2.567 3.98a.659.659 0 00.961.875l2.556-2.049a.63.63 0 01.759-.002l2.452 1.84a1.576 1.576 0 002.278-.42z" fill-rule="evenodd"></path></svg></div>
+
+                    <div class="nav-icons"><svg  style="width:24px ; height:24px;" aria-label="New Post" class="_8-yf5 " color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24">
+                        <path d="M2 12v3.45c0 2.849.698 4.005 1.606 4.944.94.909 2.098 1.608 4.946 1.608h6.896c2.848 0 4.006-.7 4.946-1.608C21.302 19.455 22 18.3 22 15.45V8.552c0-2.849-.698-4.006-1.606-4.945C19.454 2.7 18.296 2 15.448 2H8.552c-2.848 0-4.006.699-4.946 1.607C2.698 4.547 2 5.703 2 8.552z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+                        <line fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="6.545" x2="17.455" y1="12.001" y2="12.001"></line>
+                        <line fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="12.003" x2="12.003" y1="6.545" y2="17.455"></line></svg> </div>
+                    <div class="nav-icons"><svg  style="width:24px ; height:24px;"aria-label="Find People"    color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24">
+                        <polygon fill="none" points="13.941 13.953 7.581 16.424 10.06 10.056 16.42 7.585 13.941 13.953" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></polygon>
+                        <polygon fill-rule="evenodd" points="10.06 10.056 13.949 13.945 7.581 16.424 10.06 10.056"></polygon>
+                        <circle cx="12.001" cy="12.005" fill="none" r="10.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></circle></svg></div>
+                    <div class="nav-icons">   <svg aria-label="Activity Feed" style="width:24px ; height:24px;" color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24">
+                        <path d="M16.792 3.904A4.989 4.989 0 0121.5 9.122c0 3.072-2.652 4.959-5.197 7.222-2.512 2.243-3.865 3.469-4.303 3.752-.477-.309-2.143-1.823-4.303-3.752C5.141 14.072 2.5 12.167 2.5 9.122a4.989 4.989 0 014.708-5.218 4.21 4.21 0 013.675 1.941c.84 1.175.98 1.763 1.12 1.763s.278-.588 1.11-1.766a4.17 4.17 0 013.679-1.938m0-2a6.04 6.04 0 00-4.797 2.127 6.052 6.052 0 00-4.787-2.127A6.985 6.985 0 00.5 9.122c0 3.61 2.55 5.827 5.015 7.97.283.246.569.494.853.747l1.027.918a44.998 44.998 0 003.518 3.018 2 2 0 002.174 0 45.263 45.263 0 003.626-3.115l.922-.824c.293-.26.59-.519.885-.774 2.334-2.025 4.98-4.32 4.98-7.94a6.985 6.985 0 00-6.708-7.218z"></path></svg> </div>
+                    <div class="nav-icons"> <img class="profile-pic" src="/img/profile-img.jpg" alt=""> 
+                   </div>
+                    
+                </div>
+            </div>
+            </div>
+            <div class="content">
+            <div class="stories">
+                <div class="story">
+                    <div class="story-items">
+                        <div class="nav-icons"> <img class="story-pic " src="https://source.unsplash.com/random/700×700/?boy" alt=""> 
+                        <div class="story-text">Subham_rawat</div>
+                        </div>
+                        <div class="nav-icons"> <img class="story-pic " src="https://source.unsplash.com/random/700×700/?indiancricket" alt=""> 
+                            <div class="story-text">Virat_kohli</div>
+                            
+
+                    </div>
+                    <div class="xyz">
+                    <div class="nav-icons"> <img class="story-pic " src="https://source.unsplash.com/random/700×700/?men" alt=""> 
+                        <div class="story-text">sharma_rohit</div>
+                        
+
+                </div></div>
+                <div class="nav-icons"> <img class="story-pic " src="https://source.unsplash.com/random/700×700/?women" alt=""> 
+                    <div class="story-text">radhika_singh</div>
+                    
+
+            </div>
+
+            <div class="nav-icons"> <img class="story-pic " src="https://source.unsplash.com/random/700×700/?rahul alt=""> 
+                <div class="story-text">_joshi_rahul</div>
+                
+
+        </div>
+        <div class="nav-icons"> <img class="story-pic " src="https://source.unsplash.com/random/700×700/?Sachin" alt=""> 
+            <div class="story-text">Sachin12345</div>
+            
+
+    </div>
+    <div class="nav-icons"> <img class="story-pic " src="https://source.unsplash.com/random/700×700/?tech"alt=""> 
+        <div class="story-text">techera</div>
+        
+
+</div>
+         
+ 
+
+                </div>
+            </div>
+            </div>
+
+            <div class="posts">
+                <div class="post-content">
+                    <span >
+                        <img class="content-profile "src="https://c.ndtvimg.com/2021-05/k155vq1_yuzvendra-chahal-instagram_625x300_13_May_21.jpg" alt="">
+                    </span>
+                    <div class="content-text">yuzi_chahal23</div>
+                    
+                    <div><i class="bi bi-three-dots more"></i></div>
+                    
+                </div>
+                <div >
+                    <img class="post-image" src="https://pbs.twimg.com/media/FRlzN95XMAEK1tP?format=jpg&name=large " alt="">
+                </div>
+
+                <div class="comments ">
+                    <div class="comments-img">
+                        <svg  class="comment-icon " aria-label="Like" class="_8-yf5 " color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24">
+                            <path d="M16.792 3.904A4.989 4.989 0 0121.5 9.122c0 3.072-2.652 4.959-5.197 7.222-2.512 2.243-3.865 3.469-4.303 3.752-.477-.309-2.143-1.823-4.303-3.752C5.141 14.072 2.5 12.167 2.5 9.122a4.989 4.989 0 014.708-5.218 4.21 4.21 0 013.675 1.941c.84 1.175.98 1.763 1.12 1.763s.278-.588 1.11-1.766a4.17 4.17 0 013.679-1.938m0-2a6.04 6.04 0 00-4.797 2.127 6.052 6.052 0 00-4.787-2.127A6.985 6.985 0 00.5 9.122c0 3.61 2.55 5.827 5.015 7.97.283.246.569.494.853.747l1.027.918a44.998 44.998 0 003.518 3.018 2 2 0 002.174 0 45.263 45.263 0 003.626-3.115l.922-.824c.293-.26.59-.519.885-.774 2.334-2.025 4.98-4.32 4.98-7.94a6.985 6.985 0 00-6.708-7.218z"></path></svg>
+                            
+                            <svg  class="comment-icon " aria-label="Comment" class="_8-yf5 " color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24">
+                                <path d="M20.656 17.008a9.993 9.993 0 10-3.59 3.615L22 22z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2"></path></svg>
+                                <svg class="comment-icon " aria-label="Share Post" class="_8-yf5 " color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24">
+                                    <line fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2" x1="22" x2="9.218" y1="3" y2="10.083"></line>
+                                    <polygon fill="none" points="11.698 20.334 22 3.001 2 3.001 9.218 10.084 11.698 20.334" stroke="currentColor" stroke-linejoin="round" stroke-width="2"></polygon></svg>
+                                    <svg aria-label="Save" class="comment-icon-right " color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24"><polygon fill="none" points="20 21 12 13.44 4 21 4 3 20 3 20 21" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></polygon></svg>
+                    </div>
+                </div>
+
+                <div class="reactions">
+                    <div class="react">
+                        <svg aria-label="Emoji" class="_8-yf5 " color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24"><path d="M15.83 10.997a1.167 1.167 0 101.167 1.167 1.167 1.167 0 00-1.167-1.167zm-6.5 1.167a1.167 1.167 0 10-1.166 1.167 1.167 1.167 0 001.166-1.167zm5.163 3.24a3.406 3.406 0 01-4.982.007 1 1 0 10-1.557 1.256 5.397 5.397 0 008.09 0 1 1 0 00-1.55-1.263zM12 .503a11.5 11.5 0 1011.5 11.5A11.513 11.513 0 0012 .503zm0 21a9.5 9.5 0 119.5-9.5 9.51 9.51 0 01-9.5 9.5z"></path></svg>
+
+                          <input type="text" class="input-field" placeholder="Add a Comment..." class="post">
+                          <span type="submit " class="submit" disabled  >Post</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="posts">
+                <div class="post-content">
+                    <span >
+                        <img class="content-profile" src="data:image/jpeg;base64,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" alt="">
+                    </span>
+                    <div class="content-text">
+                        cristiano
+                        </div>
+                    
+                    <div><i class="bi bi-three-dots more"></i></div>
+                    
+                </div>
+                <div >
+                    <img class="post-image" src="https://wallpaperaccess.com/full/1222833.jpg" alt="">
+                </div>
+
+                <div class="comments ">
+                    <div class="comments-img">
+                        <svg  class="comment-icon " aria-label="Like" class="_8-yf5 " color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24">
+                            <path d="M16.792 3.904A4.989 4.989 0 0121.5 9.122c0 3.072-2.652 4.959-5.197 7.222-2.512 2.243-3.865 3.469-4.303 3.752-.477-.309-2.143-1.823-4.303-3.752C5.141 14.072 2.5 12.167 2.5 9.122a4.989 4.989 0 014.708-5.218 4.21 4.21 0 013.675 1.941c.84 1.175.98 1.763 1.12 1.763s.278-.588 1.11-1.766a4.17 4.17 0 013.679-1.938m0-2a6.04 6.04 0 00-4.797 2.127 6.052 6.052 0 00-4.787-2.127A6.985 6.985 0 00.5 9.122c0 3.61 2.55 5.827 5.015 7.97.283.246.569.494.853.747l1.027.918a44.998 44.998 0 003.518 3.018 2 2 0 002.174 0 45.263 45.263 0 003.626-3.115l.922-.824c.293-.26.59-.519.885-.774 2.334-2.025 4.98-4.32 4.98-7.94a6.985 6.985 0 00-6.708-7.218z"></path></svg>
+                            <svg  class="comment-icon " aria-label="Comment" class="_8-yf5 " color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24">
+                                <path d="M20.656 17.008a9.993 9.993 0 10-3.59 3.615L22 22z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2"></path></svg>
+                                <svg class="comment-icon " aria-label="Share Post" class="_8-yf5 " color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24">
+                                    <line fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2" x1="22" x2="9.218" y1="3" y2="10.083"></line>
+                                    <polygon fill="none" points="11.698 20.334 22 3.001 2 3.001 9.218 10.084 11.698 20.334" stroke="currentColor" stroke-linejoin="round" stroke-width="2"></polygon></svg>
+                                    <svg aria-label="Save" class="comment-icon-right " color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24"><polygon fill="none" points="20 21 12 13.44 4 21 4 3 20 3 20 21" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></polygon></svg>
+                    </div>
+                </div>
+
+                <div class="reactions">
+                    <div class="react">
+                        <svg aria-label="Emoji" class="_8-yf5 " color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24"><path d="M15.83 10.997a1.167 1.167 0 101.167 1.167 1.167 1.167 0 00-1.167-1.167zm-6.5 1.167a1.167 1.167 0 10-1.166 1.167 1.167 1.167 0 001.166-1.167zm5.163 3.24a3.406 3.406 0 01-4.982.007 1 1 0 10-1.557 1.256 5.397 5.397 0 008.09 0 1 1 0 00-1.55-1.263zM12 .503a11.5 11.5 0 1011.5 11.5A11.513 11.513 0 0012 .503zm0 21a9.5 9.5 0 119.5-9.5 9.51 9.51 0 01-9.5 9.5z"></path></svg>
+
+                          <input type="text" class="input-field" placeholder="Add a Comment..." class="post">
+                          <span type="submit " class="submit" disabled >Post</span>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="posts">
+                <div class="post-content">
+                    <span >
+                        <img class="content-profile" src="https://www.pngitem.com/pimgs/m/314-3144721_best-quotes-png-transparent-png.png" alt="">
+                    </span>
+                    <div class="content-text">
+                        thegoodquote</div>
+                    
+                    <div><i class="bi bi-three-dots more"></i></div>
+                    
+                </div>
+                <div >
+                    <img class="post-image" src="https://i.pinimg.com/originals/b9/83/4b/b9834be6393edb7bb18b06c68d809161.jpg" alt="">
+                </div>
+
+                <div class="comments ">
+                    <div class="comments-img">
+                        <svg  class="comment-icon " aria-label="Like" class="_8-yf5 " color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24">
+                            <path d="M16.792 3.904A4.989 4.989 0 0121.5 9.122c0 3.072-2.652 4.959-5.197 7.222-2.512 2.243-3.865 3.469-4.303 3.752-.477-.309-2.143-1.823-4.303-3.752C5.141 14.072 2.5 12.167 2.5 9.122a4.989 4.989 0 014.708-5.218 4.21 4.21 0 013.675 1.941c.84 1.175.98 1.763 1.12 1.763s.278-.588 1.11-1.766a4.17 4.17 0 013.679-1.938m0-2a6.04 6.04 0 00-4.797 2.127 6.052 6.052 0 00-4.787-2.127A6.985 6.985 0 00.5 9.122c0 3.61 2.55 5.827 5.015 7.97.283.246.569.494.853.747l1.027.918a44.998 44.998 0 003.518 3.018 2 2 0 002.174 0 45.263 45.263 0 003.626-3.115l.922-.824c.293-.26.59-.519.885-.774 2.334-2.025 4.98-4.32 4.98-7.94a6.985 6.985 0 00-6.708-7.218z"></path></svg>
+                            <svg  class="comment-icon " aria-label="Comment" class="_8-yf5 " color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24">
+                                <path d="M20.656 17.008a9.993 9.993 0 10-3.59 3.615L22 22z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2"></path></svg>
+                                <svg class="comment-icon " aria-label="Share Post" class="_8-yf5 " color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24">
+                                    <line fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2" x1="22" x2="9.218" y1="3" y2="10.083"></line>
+                                    <polygon fill="none" points="11.698 20.334 22 3.001 2 3.001 9.218 10.084 11.698 20.334" stroke="currentColor" stroke-linejoin="round" stroke-width="2"></polygon></svg>
+                                    <svg aria-label="Save" class="comment-icon-right " color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24"><polygon fill="none" points="20 21 12 13.44 4 21 4 3 20 3 20 21" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></polygon></svg>
+                    </div>
+                </div>
+
+                <div class="reactions">
+                    <div class="react">
+                        <svg aria-label="Emoji" class="_8-yf5 " color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24"><path d="M15.83 10.997a1.167 1.167 0 101.167 1.167 1.167 1.167 0 00-1.167-1.167zm-6.5 1.167a1.167 1.167 0 10-1.166 1.167 1.167 1.167 0 001.166-1.167zm5.163 3.24a3.406 3.406 0 01-4.982.007 1 1 0 10-1.557 1.256 5.397 5.397 0 008.09 0 1 1 0 00-1.55-1.263zM12 .503a11.5 11.5 0 1011.5 11.5A11.513 11.513 0 0012 .503zm0 21a9.5 9.5 0 119.5-9.5 9.51 9.51 0 01-9.5 9.5z"></path></svg>
+
+                          <input type="text" class="input-field" placeholder="Add a Comment..." class="post">
+                          <span type="submit " class="submit" disabled  >Post</span>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div class="posts">
+                <div class="post-content">
+                    <span >
+                        <img class="content-profile" src="https://images.indianexpress.com/2021/04/arijit-singh-1200.jpg" alt="">
+                    </span>
+                    <div class="content-text">arijitsingh</div>
+                    
+                    <div><i class="bi bi-three-dots more"></i></div>
+                    
+                </div>
+                <div >
+                    <img class="post-image" src="https://w0.peakpx.com/wallpaper/97/713/HD-wallpaper-arjith-singh-bollywood-singer.jpg" alt="">
+                </div>
+
+                <div class="comments ">
+                    <div class="comments-img">
+                        <svg  class="comment-icon " aria-label="Like" class="_8-yf5 " color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24">
+                            <path d="M16.792 3.904A4.989 4.989 0 0121.5 9.122c0 3.072-2.652 4.959-5.197 7.222-2.512 2.243-3.865 3.469-4.303 3.752-.477-.309-2.143-1.823-4.303-3.752C5.141 14.072 2.5 12.167 2.5 9.122a4.989 4.989 0 014.708-5.218 4.21 4.21 0 013.675 1.941c.84 1.175.98 1.763 1.12 1.763s.278-.588 1.11-1.766a4.17 4.17 0 013.679-1.938m0-2a6.04 6.04 0 00-4.797 2.127 6.052 6.052 0 00-4.787-2.127A6.985 6.985 0 00.5 9.122c0 3.61 2.55 5.827 5.015 7.97.283.246.569.494.853.747l1.027.918a44.998 44.998 0 003.518 3.018 2 2 0 002.174 0 45.263 45.263 0 003.626-3.115l.922-.824c.293-.26.59-.519.885-.774 2.334-2.025 4.98-4.32 4.98-7.94a6.985 6.985 0 00-6.708-7.218z"></path></svg>
+                            <svg  class="comment-icon " aria-label="Comment" class="_8-yf5 " color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24">
+                                <path d="M20.656 17.008a9.993 9.993 0 10-3.59 3.615L22 22z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2"></path></svg>
+                                <svg class="comment-icon " aria-label="Share Post" class="_8-yf5 " color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24">
+                                    <line fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2" x1="22" x2="9.218" y1="3" y2="10.083"></line>
+                                    <polygon fill="none" points="11.698 20.334 22 3.001 2 3.001 9.218 10.084 11.698 20.334" stroke="currentColor" stroke-linejoin="round" stroke-width="2"></polygon></svg>
+                                    <svg aria-label="Save" class="comment-icon-right " color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24"><polygon fill="none" points="20 21 12 13.44 4 21 4 3 20 3 20 21" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></polygon></svg>
+                    </div>
+                </div>
+
+                <div class="reactions">
+                    <div class="react">
+                        <svg aria-label="Emoji" class="_8-yf5 " color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24"><path d="M15.83 10.997a1.167 1.167 0 101.167 1.167 1.167 1.167 0 00-1.167-1.167zm-6.5 1.167a1.167 1.167 0 10-1.166 1.167 1.167 1.167 0 001.166-1.167zm5.163 3.24a3.406 3.406 0 01-4.982.007 1 1 0 10-1.557 1.256 5.397 5.397 0 008.09 0 1 1 0 00-1.55-1.263zM12 .503a11.5 11.5 0 1011.5 11.5A11.513 11.513 0 0012 .503zm0 21a9.5 9.5 0 119.5-9.5 9.51 9.51 0 01-9.5 9.5z"></path></svg>
+                          <input type="text" class="input-field" placeholder="Add a Comment..." class="post">
+                          <span type="submit " class="submit" disabled  >Post</span>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div class="posts">
+                <div class="post-content">
+                    <span >
+                        <img class="content-profile" src="https://wallpaperaccess.com/full/5747916.png" alt="">
+                    </span>
+                    <div class="content-text">
+                        indiancricketteam</div>
+                    
+                    <div><i class="bi bi-three-dots more"></i></div>
+                    
+                </div>
+                <div >
+                    <img class="post-image" src="https://gumlet.assettype.com/thequint/2022-02/3dadaf2c-d7e1-4fa8-a5e2-e4f3406df5f5/FK5hP_FaIAUwOX9.jpg" alt="">
+                </div>
+
+                <div class="comments ">
+                    <div class="comments-img">
+                        <svg  class="comment-icon " aria-label="Like" class="_8-yf5 " color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24">
+                            <path d="M16.792 3.904A4.989 4.989 0 0121.5 9.122c0 3.072-2.652 4.959-5.197 7.222-2.512 2.243-3.865 3.469-4.303 3.752-.477-.309-2.143-1.823-4.303-3.752C5.141 14.072 2.5 12.167 2.5 9.122a4.989 4.989 0 014.708-5.218 4.21 4.21 0 013.675 1.941c.84 1.175.98 1.763 1.12 1.763s.278-.588 1.11-1.766a4.17 4.17 0 013.679-1.938m0-2a6.04 6.04 0 00-4.797 2.127 6.052 6.052 0 00-4.787-2.127A6.985 6.985 0 00.5 9.122c0 3.61 2.55 5.827 5.015 7.97.283.246.569.494.853.747l1.027.918a44.998 44.998 0 003.518 3.018 2 2 0 002.174 0 45.263 45.263 0 003.626-3.115l.922-.824c.293-.26.59-.519.885-.774 2.334-2.025 4.98-4.32 4.98-7.94a6.985 6.985 0 00-6.708-7.218z"></path></svg>
+                            <svg  class="comment-icon " aria-label="Comment" class="_8-yf5 " color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24">
+                                <path d="M20.656 17.008a9.993 9.993 0 10-3.59 3.615L22 22z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2"></path></svg>
+                                <svg class="comment-icon " aria-label="Share Post" class="_8-yf5 " color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24">
+                                    <line fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2" x1="22" x2="9.218" y1="3" y2="10.083"></line>
+                                    <polygon fill="none" points="11.698 20.334 22 3.001 2 3.001 9.218 10.084 11.698 20.334" stroke="currentColor" stroke-linejoin="round" stroke-width="2"></polygon></svg>
+                                    <svg aria-label="Save" class="comment-icon-right " color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24"><polygon fill="none" points="20 21 12 13.44 4 21 4 3 20 3 20 21" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></polygon></svg>
+                    </div>
+                </div>
+
+                <div class="reactions">
+                    <div class="react">
+                        <svg aria-label="Emoji" class="_8-yf5 " color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24"><path d="M15.83 10.997a1.167 1.167 0 101.167 1.167 1.167 1.167 0 00-1.167-1.167zm-6.5 1.167a1.167 1.167 0 10-1.166 1.167 1.167 1.167 0 001.166-1.167zm5.163 3.24a3.406 3.406 0 01-4.982.007 1 1 0 10-1.557 1.256 5.397 5.397 0 008.09 0 1 1 0 00-1.55-1.263zM12 .503a11.5 11.5 0 1011.5 11.5A11.513 11.513 0 0012 .503zm0 21a9.5 9.5 0 119.5-9.5 9.51 9.51 0 01-9.5 9.5z"></path></svg>
+
+                          <input type="text" class="input-field" placeholder="Add a Comment...">
+                          <span type="submit " class="submit" class="post" disabled >Post</span>
+                    </div>
+                </div>
+            </div>
+
+
+
+            
+            
+
+
+        <div class="right-content">
+            <div class="right-side-content bcd">
+                <div class="right-side-img">
+                    <img src="/img/profile-img.jpg" alt="" style="width:56px ; height:56px; border-radius:50%;
+                    ">
+                </div>
+                <div class="right-side-text">
+                    <h2>imrajatjeena</h2> 
+                    <h4 class="light-text">RaJaT JeeNa</h4>
+                </div>
+                <div class="switch">
+                    <span>Switch</span>
+                </div>
+            </div>
+            <div class="right-side-content bcd">
+               
+                <div class="right-side-text">
+                     
+                    <br> <h2 class="  suggestion-text" style="margin-top: 10x;">Suggestions For You </h2>
+                   
+                </div>
+                <div  >
+                   <br> <span style="font-size: 14px; margin-left:48px; font-weight:900px ;margin-top:10px ;color:rgba(69, 67, 67,0.8)">See All</span>
+                </div>
+            </div>
+
+            <div class="right-side-content bcd">
+   
+                <div class="right-side-img" style="margin-left: 0;">
+                    <br>
+                    <img src="https://source.unsplash.com/random/700×700/?uttarakhand" alt="" style="width:45px ; height:45px; border-radius:50%;
+                    ">
+                </div>
+                <div class="right-side-text">
+                    <br>
+                    <h2>_rakul_</h2> 
+                    <h4 class="light-text">New to Instagram</h4>
+                </div>
+                <div class="switch">
+                    <br>
+                    <span>Follow</span>
+                </div>
+            </div>
+            <div class="right-side-content bcd">
+   
+                <div class="right-side-img">
+                    <br>
+                    <img src="https://source.unsplash.com/random/700×700/?poet" alt="" style="width:45px ; height:45px; border-radius:50%;
+                    ">
+                </div>
+                <div class="right-side-text">
+                    <br>
+                    <h2>mani_04</h2> 
+                    <h4 class="light-text">Followed by tech_01</h4>
+                </div>
+                <div class="switch">
+                    <br>
+                    <span>Follow</span>
+                </div>
+            </div>
+            <div class="right-side-content bcd">
+   
+                <div class="right-side-img">
+                    <br>
+                    <img src="https://source.unsplash.com/random/700×700/?coder" alt="" style="width:45px ; height:45px; border-radius:50%;
+                    ">
+                </div>
+                <div class="right-side-text">
+                    <br>
+                    <h2>ashish_05</h2> 
+                    <h4 class="light-text">Followed by uk_04</h4>
+                </div>
+                <div class="switch">
+                    <br>
+                    <span>Follow</span>
+                </div>
+            </div>
+            <div class="right-side-content bcd">
+   
+                <div class="right-side-img">
+                    <br>
+                    <img src="https://source.unsplash.com/random/700×700/?developers" alt="" style="width:45px ; height:45px; border-radius:50%;
+                    ">
+                </div>
+                <div class="right-side-text">
+                    <br>
+                    <h2>_rahul_02</h2> 
+                    <h4 class="light-text">Followed by raj_01</h4>
+                </div>
+                <div class="switch">
+                    <br>
+                   <span>Follow</span>
+                </div>
+            </div>
+            
+        </div>
+         
+              
+            </div>  
+        </div>
+    </div>
+</div>
+
+
+
+
+
+    </body>
+    </html>
